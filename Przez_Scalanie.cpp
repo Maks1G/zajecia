@@ -17,7 +17,7 @@ void sortowaniePrzezScalanie(int tablica[], int poczatek, int koniec) {
        int srodek = poczatek + (koniec - poczatek) / 2;
        sortowaniePrzezScalanie(tablica, poczatek, srodek);
        sortowaniePrzezScalanie(tablica, srodek + 1, koniec);
-       
+       std::inplace_merge(tablica + poczatek, tablica + srodek + 1, tablica + koniec + 1);
    }
 }
 int main() {
